@@ -1,0 +1,9 @@
+:root{
+--duration-fast:200ms;/* @kind other */
+--duration-normal:300ms;/* @kind other */
+--duration-slow:500ms;/* @kind other */
+--ease-standard:cubic-bezier(.4,0,.2,1);/* @kind other */
+--ease-out:cubic-bezier(0,0,.2,1);/* @kind other */
+--hover-lift:2px;--hover-zoom:1.02;/* @kind other */
+--arrow-shift:4px;
+}

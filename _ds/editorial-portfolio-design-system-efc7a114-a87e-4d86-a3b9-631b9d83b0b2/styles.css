@@ -1,0 +1,11 @@
+@import 'tokens/fonts.css';
+@import 'tokens/colors.css';
+@import 'tokens/typography.css';
+@import 'tokens/spacing.css';
+@import 'tokens/radius.css';
+@import 'tokens/shadow.css';
+@import 'tokens/motion.css';
+@import 'tokens/layout.css';
+body{background:var(--bg);color:var(--fg-1);font-family:var(--font-sans);margin:0}
+a{color:var(--link);text-decoration:none}
+a:hover{color:var(--link-hover)}

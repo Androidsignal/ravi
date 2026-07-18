@@ -1,0 +1,4 @@
+:root{
+--nav-height:80px;--grid-columns:12;/* @kind other */
+--grid-gap:var(--space-24);
+}
