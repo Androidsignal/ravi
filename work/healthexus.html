@@ -41,7 +41,7 @@
       <div class="cs-chips"><span class="chip">Flutter</span><span class="chip">Firebase Auth</span><span class="chip">Encryption</span><span class="chip">REST</span></div>
     </div>
     <div class="cs-shot reveal"><div class="ticks"></div>
-      <image-slot id="cs-healthexus-hero" shape="rect" fit="cover" src="../assets/work/healthexus.hero1.png" placeholder="Drop Healthexus hero screenshot"></image-slot>
+      <image-slot id="cs-healthexus-hero" shape="rect" fit="cover" src="../assets/work/healthexus-hero.png" placeholder="Drop Healthexus hero screenshot"></image-slot>
     </div>
   </section>
 
@@ -54,6 +54,17 @@
     <div class="cs-block reveal"><div><span class="k">01</span><h3>The problem</h3></div><p>Clinicians and patients needed a fast, secure way to exchange and read health data on mobile.</p></div>
     <div class="cs-block reveal"><div><span class="k">02</span><h3>The approach</h3></div><p>I implemented encrypted data exchange with role-based access and a dashboard that keeps sensitive information legible without overwhelming the user.</p></div>
     <div class="cs-block reveal"><div><span class="k">03</span><h3>The result</h3></div><p>A production-grade client that handles sensitive data responsibly while staying quick to use.</p></div>
+
+    <div class="cs-features reveal">
+      <div class="eyebrow"><span class="dot"></span>KEY FEATURES</div>
+      <div class="cs-feat-grid"><div class="cs-feat"><span class="n">01</span><b>Universal Accessibility</b><p>Runs on existing smartphones, removing the need for specialized medical hardware.</p></div><div class="cs-feat"><span class="n">02</span><b>Advanced Health Monitoring</b><p>Measures four of five vital signs and nearly 50 biomarkers from a 30–60 second face scan.</p></div><div class="cs-feat"><span class="n">03</span><b>Comprehensive Assessment</b><p>90+ clinical surveys for behavioral health give a holistic view of well-being.</p></div><div class="cs-feat"><span class="n">04</span><b>Data Security & Integration</b><p>Partners with Mastercard for robust data protection and financial-system integration.</p></div><div class="cs-feat"><span class="n">05</span><b>Interoperability</b><p>Standardized HL7 and FHIR formats integrate with national and global health systems.</p></div><div class="cs-feat"><span class="n">06</span><b>Smart Recommendation Engine</b><p>AI adapts to each health profile and symptom set, matching next steps precisely.</p></div></div>
+    </div>
+
+    <div class="cs-solve reveal">
+      <div class="eyebrow"><span class="dot"></span>CHALLENGES & SOLUTIONS</div>
+      <p class="lede-s">Turning a smartphone camera into a clinical-grade vitals scanner demanded serious computer vision, hardware parity and uncompromising medical-data security.</p>
+      <div class="cs-solve-grid"><div class="cs-solve-item"><span class="n">01</span><h4>Live Photoplethysmography</h4><p class="prob">Extracting heart rate from facial micro-color changes needs massive computational power.</p><div class="sol"><span class="lbl">Solution</span><p>Wrote custom C++ computer-vision algorithms run via Flutter FFI directly on the device neural engine.</p></div></div><div class="cs-solve-item"><span class="n">02</span><h4>Cross-Device Camera Parity</h4><p class="prob">Android makers apply wildly different default post-processing to camera feeds.</p><div class="sol"><span class="lbl">Solution</span><p>Bypassed standard camera APIs to pull raw, uncompressed frames straight from the hardware sensors.</p></div></div><div class="cs-solve-item"><span class="n">03</span><h4>Medical Data Security</h4><p class="prob">Handling raw vital data demanded uncompromising adherence to healthcare privacy law.</p><div class="sol"><span class="lbl">Solution</span><p>Implemented AES-256 encryption for all temporary files with zero persistent local medical data.</p></div></div><div class="cs-solve-item"><span class="n">04</span><h4>Foolproof User Guidance</h4><p class="prob">Users struggled to position their faces correctly for the scan.</p><div class="sol"><span class="lbl">Solution</span><p>Built a dynamic AR overlay mask that turns green only when lighting and positioning are perfect.</p></div></div></div>
+    </div>
 
     <div class="cs-gallery reveal">
       <div class="g-wrap tall"><image-slot id="cs-healthexus-g1" shape="rect" fit="cover" src="../assets/work/healthexus-g1.png" placeholder="Screen 1"></image-slot></div>

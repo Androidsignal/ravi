@@ -272,6 +272,30 @@ html.preload .load{opacity:0}
 .cs-block .k{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;color:var(--accent-dim);text-transform:uppercase}
 .cs-block h3{font-size:clamp(28px,3.2vw,42px);line-height:1;margin-top:12px}
 .cs-block p{color:var(--fg-2);font-size:clamp(17px,1.4vw,20px);line-height:1.6;max-width:60ch}
+.cs-features{padding-block:56px;border-bottom:1px solid var(--line)}
+.cs-features .eyebrow{margin-bottom:36px}
+.cs-feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
+.cs-feat{padding:30px 34px 32px;border-bottom:1px solid var(--line);position:relative;transition:background .3s var(--ease-out,ease)}
+.cs-feat:nth-child(odd){border-right:1px solid var(--line)}
+.cs-feat:hover{background:var(--surface)}
+.cs-feat .n{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;color:var(--accent-dim);display:block;margin-bottom:18px}
+.cs-feat b{font-family:var(--font-disp);font-style:italic;font-weight:400;font-size:clamp(24px,2.4vw,30px);display:block;margin-bottom:10px;letter-spacing:-.01em;line-height:1.1}
+.cs-feat p{color:var(--fg-2);font-size:16px;line-height:1.6;max-width:42ch}
+@media (max-width:900px){.cs-feat-grid{grid-template-columns:1fr}.cs-feat:nth-child(odd){border-right:none}}
+.cs-solve{padding-block:56px;border-bottom:1px solid var(--line)}
+.cs-solve .eyebrow{margin-bottom:14px}
+.cs-solve .lede-s{color:var(--fg-2);font-size:clamp(17px,1.4vw,20px);line-height:1.6;max-width:62ch;margin-bottom:36px}
+.cs-solve-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
+.cs-solve-item{padding:30px 34px 34px;border-bottom:1px solid var(--line);transition:background .3s var(--ease-out,ease)}
+.cs-solve-item:nth-child(odd){border-right:1px solid var(--line)}
+.cs-solve-item:hover{background:var(--surface)}
+.cs-solve-item .n{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;color:var(--accent-dim);display:block;margin-bottom:16px}
+.cs-solve-item h4{font-family:var(--font-disp);font-style:italic;font-weight:400;font-size:clamp(22px,2.2vw,28px);letter-spacing:-.01em;line-height:1.15;margin-bottom:16px}
+.cs-solve-item .prob{color:var(--fg);font-weight:500;font-size:16px;line-height:1.55;margin-bottom:16px}
+.cs-solve-item .sol{padding-top:16px;border-top:1px solid var(--line)}
+.cs-solve-item .sol .lbl{font-family:var(--font-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg-3);display:block;margin-bottom:8px}
+.cs-solve-item .sol p{color:var(--fg-2);font-size:15px;line-height:1.6}
+@media (max-width:900px){.cs-solve-grid{grid-template-columns:1fr}.cs-solve-item:nth-child(odd){border-right:none}}
 .cs-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding-block:64px}
 .cs-gallery image-slot{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
 .cs-gallery .g-wrap{aspect-ratio:4/3;position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
