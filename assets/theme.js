@@ -8,4 +8,10 @@
     apply(next);
     try{ localStorage.setItem('rv-theme', next); }catch(err){}
   });
+  // Mobile nav toggle — works on every page that has #burger + #nav.
+  document.addEventListener('click', function(e){
+    var nav = document.getElementById('nav'); if(!nav) return;
+    if(e.target.closest('.burger')){ nav.classList.toggle('nav-open'); return; }
+    if(nav.classList.contains('nav-open') && e.target.closest('.nav-links a')){ nav.classList.remove('nav-open'); }
+  });
 })();

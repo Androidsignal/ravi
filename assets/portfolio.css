@@ -175,6 +175,13 @@ html.preload .load{opacity:0}
 @media (max-width:900px){
   .nav-links,.nav-cta{display:none}
   .burger{display:flex;align-items:center;justify-content:center}
+  /* .nav.nav-open{background:rgba(10,10,11,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom-color:var(--line)} */
+  .nav.nav-open{background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom-color:var(--line)}
+
+  .nav.nav-open .nav-inner{flex-wrap:wrap}
+  .nav.nav-open .nav-links{display:flex;flex-direction:column;align-items:flex-start;gap:4px;order:3;flex-basis:100%;padding:10px 0 18px}
+  .nav.nav-open .nav-links a{font-size:18px;padding:10px 2px;display:block}
+  .nav.nav-open .nav-cta{display:inline-flex;order:4;margin-bottom:14px}
   .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
 }
 @media (max-width:560px){
