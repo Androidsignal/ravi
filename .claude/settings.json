@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs git rm -q --)",
+      "Bash(xargs -0 git rm -q --)",
+      "Bash(echo \"exit: $?\")"
+    ]
+  }
+}
