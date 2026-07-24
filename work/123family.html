@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){try{var t=localStorage.getItem("rv-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<script>(function(){try{var t=localStorage.getItem("rv-theme")||"light";document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","light");}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>123Family — Ravi Vithani</title>
@@ -40,8 +40,8 @@
       <p class="lede">WebRTC video calling with a senior-friendly UI and secure communication.</p>
       <div class="cs-chips"><span class="chip">Flutter</span><span class="chip">WebRTC</span><span class="chip">Firebase</span></div>
     </div>
-     <div class="cs-shot reveal"><div class="ticks"></div>
-      <image-slot id="cs-2i2i-hero" shape="rect" fit="cover" src="../assets/work/123family-hero.png" placeholder="Drop 2i2i hero screenshot"></image-slot>
+    <div class="cs-shot reveal"><div class="ticks"></div>
+      <image-slot id="cs-123family-hero" shape="rect" fit="cover" src="../assets/work/123family-hero.png" placeholder="Drop 123Family hero screenshot"></image-slot>
     </div>
   </section>
 
@@ -66,19 +66,16 @@
       <div class="cs-solve-grid"><div class="cs-solve-item"><span class="n">01</span><h4>Zero-Learning-Curve Accessibility</h4><p class="prob">Designing an interface for users with dementia requires eliminating traditional UI complexity entirely.</p><div class="sol"><span class="lbl">Solution</span><p>Built an ultra-minimalist, high-contrast Flutter UI with oversized touch targets and a home-screen lock preventing accidental exits.</p></div></div><div class="cs-solve-item"><span class="n">02</span><h4>Unassisted Communication</h4><p class="prob">Users with severe physical limitations struggle to press a button to accept video calls.</p><div class="sol"><span class="lbl">Solution</span><p>Engineered a secure permission-based auto-answer protocol so trusted family can start calls that connect without physical interaction.</p></div></div><div class="cs-solve-item"><span class="n">03</span><h4>Legacy Hardware Optimization</h4><p class="prob">Families repurpose outdated devices that struggle with intensive video calling.</p><div class="sol"><span class="lbl">Solution</span><p>Optimized the Flutter rendering engine with aggressive memory management for lag-free video on low-RAM devices.</p></div></div><div class="cs-solve-item"><span class="n">04</span><h4>Secure & Private Network</h4><p class="prob">Seniors with cognitive decline are highly vulnerable to spam, scams and unsolicited contact.</p><div class="sol"><span class="lbl">Solution</span><p>Built a closed-loop contact system where only pre-approved, whitelisted family members can connect.</p></div></div></div>
     </div>
 
-    <div class="cs-slider reveal">
-      <div class="cs-slider-track">
+    <div class="cs-slider reveal" id="csSlider">
+      <div class="cs-slider-track" id="csTrack">
         <div class="cs-phone"><img src="../assets/work/123family/ss1.avif" alt="Screen" loading="lazy"></div>
         <div class="cs-phone"><img src="../assets/work/123family/ss2.avif" alt="Screen" loading="lazy"></div>
         <div class="cs-phone"><img src="../assets/work/123family/ss3.avif" alt="Screen" loading="lazy"></div>
         <div class="cs-phone"><img src="../assets/work/123family/ss4.avif" alt="Screen" loading="lazy"></div>
         <div class="cs-phone"><img src="../assets/work/123family/ss5.avif" alt="Screen" loading="lazy"></div>
-        <div class="cs-phone" aria-hidden="true"><img src="../assets/work/123family/ss1.avif" alt="" loading="lazy"></div>
-        <div class="cs-phone" aria-hidden="true"><img src="../assets/work/123family/ss2.avif" alt="" loading="lazy"></div>
-        <div class="cs-phone" aria-hidden="true"><img src="../assets/work/123family/ss3.avif" alt="" loading="lazy"></div>
-        <div class="cs-phone" aria-hidden="true"><img src="../assets/work/123family/ss4.avif" alt="" loading="lazy"></div>
-        <div class="cs-phone" aria-hidden="true"><img src="../assets/work/123family/ss5.avif" alt="" loading="lazy"></div>
       </div>
+      <button class="cs-slider-btn prev" id="csPrev" aria-label="Previous screens">←</button>
+      <button class="cs-slider-btn next" id="csNext" aria-label="Next screens">→</button>
     </div>
 
     <div class="cs-next reveal">
@@ -117,8 +114,15 @@
   var s=function(){nav.classList.toggle('scrolled',window.scrollY>40)};s();window.addEventListener('scroll',s,{passive:true});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -6% 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  var track=document.getElementById('csTrack');
+  if(track){
+    var step=function(){var c=track.querySelector('.cs-phone');return c?c.offsetWidth+32:296};
+    document.getElementById('csPrev').addEventListener('click',function(){track.scrollBy({left:-step()*2,behavior:'smooth'})});
+    document.getElementById('csNext').addEventListener('click',function(){track.scrollBy({left:step()*2,behavior:'smooth'})});
+  }
 })();
 </script>
+<script src="../assets/slider.js"></script>
 <script src="../assets/theme.js"></script>
 <script src="../assets/cursor.js"></script>
 </body>

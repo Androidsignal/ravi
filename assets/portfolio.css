@@ -307,6 +307,11 @@ html.preload .load{opacity:0}
 .cs-gallery .g-wrap{aspect-ratio:4/3;position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
 .cs-gallery .g-wrap.tall{grid-row:span 2;aspect-ratio:auto}
 .cs-slider{margin-block:64px;position:relative}
+.cs-slider.is-marquee{width:100vw;left:50%;margin-left:-50vw;overflow:hidden;margin-block:80px}
+.cs-slider.is-marquee .cs-slider-track{width:max-content;overflow:visible;scroll-snap-type:none;padding-inline:32px;animation:csMarquee var(--csdur,40s) linear infinite;will-change:transform}
+.cs-slider.is-marquee:hover .cs-slider-track{animation-play-state:paused}
+.cs-slider.is-marquee .cs-slider-btn{display:none}
+@keyframes csMarquee{from{transform:translate3d(0,0,0)}to{transform:translate3d(calc(-50% - 16px),0,0)}}
 .cs-slider-track{display:flex;gap:32px;overflow-x:auto;scroll-snap-type:x mandatory;padding-block:8px;scrollbar-width:none;-ms-overflow-style:none;scroll-padding-inline:8px}
 .cs-slider-track::-webkit-scrollbar{display:none}
 .cs-slider-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:52px;height:52px;border-radius:999px;border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 88%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--fg);font-size:20px;line-height:1;cursor:pointer;display:grid;place-items:center;box-shadow:var(--shadow,0 8px 30px rgba(0,0,0,.08));transition:transform .2s ease,opacity .2s ease}

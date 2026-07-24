@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){try{var t=localStorage.getItem("rv-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<script>(function(){try{var t=localStorage.getItem("rv-theme")||"light";document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","light");}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HealthGauge — Ravi Vithani</title>
@@ -67,12 +67,12 @@
     </div>
 
     <div class="cs-slider reveal">
-      <div class="cs-slider-track"> 
+      <div class="cs-slider-track">
         <div class="cs-phone"><img src="../assets/work/health_gauge/ss1.avif" alt="Screen" loading="lazy"></div>
         <div class="cs-phone"><img src="../assets/work/health_gauge/ss2.avif" alt="Screen" loading="lazy"></div>
         <div class="cs-phone"><img src="../assets/work/health_gauge/ss3.avif" alt="Screen" loading="lazy"></div>
         <div class="cs-phone"><img src="../assets/work/health_gauge/ss4.avif" alt="Screen" loading="lazy"></div>
-        <div class="cs-phone"><img src="../assets/work/health_gauge/ss5.avif" alt="Screen" loading="lazy"></div> 
+        <div class="cs-phone"><img src="../assets/work/health_gauge/ss5.avif" alt="Screen" loading="lazy"></div>
         <div class="cs-phone" aria-hidden="true"><img src="../assets/work/health_gauge/ss1.avif" alt="" loading="lazy"></div>
         <div class="cs-phone" aria-hidden="true"><img src="../assets/work/health_gauge/ss2.avif" alt="" loading="lazy"></div>
         <div class="cs-phone" aria-hidden="true"><img src="../assets/work/health_gauge/ss3.avif" alt="" loading="lazy"></div>
@@ -119,6 +119,7 @@
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 })();
 </script>
+<script src="../assets/slider.js"></script>
 <script src="../assets/theme.js"></script>
 <script src="../assets/cursor.js"></script>
 </body>

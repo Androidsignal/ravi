@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(){try{var t=localStorage.getItem("rv-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<script>(function(){try{var t=localStorage.getItem("rv-theme")||"light";document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","light");}})();</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Healthexus — Ravi Vithani</title>
@@ -41,7 +41,7 @@
       <div class="cs-chips"><span class="chip">Flutter</span><span class="chip">Firebase Auth</span><span class="chip">Encryption</span><span class="chip">REST</span></div>
     </div>
     <div class="cs-shot reveal"><div class="ticks"></div>
-      <image-slot id="cs-healthexus-hero" shape="rect" fit="cover" src="../assets/work/healthexus.thumb.png" placeholder="Drop Healthexus hero screenshot"></image-slot>
+      <image-slot id="cs-healthexus-hero" shape="rect" fit="cover" src="../assets/work/healthexus-hero.png" placeholder="Drop Healthexus hero screenshot"></image-slot>
     </div>
   </section>
 
@@ -119,6 +119,7 @@
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
 })();
 </script>
+<script src="../assets/slider.js"></script>
 <script src="../assets/theme.js"></script>
 <script src="../assets/cursor.js"></script>
 </body>
